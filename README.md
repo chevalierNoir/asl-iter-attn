@@ -10,7 +10,7 @@ This is the code for paper:
 2. Prerequisites:
 
 * python 2.7+ (Should be compatible with 3.x)
-* pytorch 0.4.1
+* pytorch 0.4+
 * OpenCV 3+
 * [Warp-ctc](https://github.com/SeanNaren/warp-ctc)
 * [face_recognition](https://github.com/ageitgey/face_recognition) (required for Face-ROI setting)
