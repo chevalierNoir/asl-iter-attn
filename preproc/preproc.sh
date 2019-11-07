@@ -5,7 +5,7 @@
 # start sequence id
 start=0
 # end sequence id (-1: until the end)
-end=2
+end=-1
 
 echo "process csv file"
 python -B proc_csv.py --iraw $pd_csv --odir $csv_dir --ofn $whole_csv || exit 1;
@@ -30,7 +30,7 @@ if [ $task == 'whole' ];then
 elif [ $task == 'face-roi' ];then
     echo "Face detection"
     origin_bbox_dir=$data_dir/face_bbox
-    # python -B detect_face.py --rgb $rgb_dir --bbox $origin_bbox_dir --csv $whole_csv --start $start --end $end || exit 1;
+    python -B detect_face.py --rgb $rgb_dir --bbox $origin_bbox_dir --csv $whole_csv --start $start --end $end || exit 1;
 
     init_rgb_dir=$iter_dir/rgb_0
     init_prior_dir=$iter_dir/prior_0
