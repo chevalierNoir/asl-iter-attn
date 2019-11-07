@@ -7,12 +7,13 @@ This is the code for paper:
 ## Preparation:
 1. Download [data](https://ttic.uchicago.edu/~klivescu/ChicagoFSWild.htm#download)
 
-2. Major dependencies:
-python 2.7+ (Should be compatible with 3.x)
-pytorch 0.4.1
-OpenCV 3+
-[Warp-ctc](https://github.com/SeanNaren/warp-ctc)
-[face_recognition](https://github.com/ageitgey/face_recognition) (required for Face-ROI setting)
+2. Prerequisites:
+
+* python 2.7+ (Should be compatible with 3.x)
+* pytorch 0.4.1
+* OpenCV 3+
+* [Warp-ctc](https://github.com/SeanNaren/warp-ctc)
+* [face_recognition](https://github.com/ageitgey/face_recognition) (required for Face-ROI setting)
 
 ## Experiment pipeline:
 1. Untar ChicagoFSWild.tgz and edit paths in path.sh
