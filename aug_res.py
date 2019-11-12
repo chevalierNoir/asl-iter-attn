@@ -8,7 +8,7 @@ import scipy.io as sio
 
 
 def idx2name(idx):
-    return "0"*(4-len(str(idx)))+str(idx)
+    return str(idx).zfill(4)
 
 
 def aug_resolution(subdir, in_dir, out_dir, beta_dir, lambda_dirs, scale, hw):

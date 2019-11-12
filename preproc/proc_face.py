@@ -97,7 +97,8 @@ def greedy(boxes, scores, thr_iu=0.5):
 def find_signer_face(in_dir, out_dir, opt_dir, csv, log, ratio, start, end):
 
     def int2str(idx):
-        return "0"*(4-len(str(idx)))+str(idx)
+        return str(idx).zfill(4)
+    
     with open(csv, "r") as fo:
         subdirs = list(map(lambda x: x.strip().split(",")[0], fo.readlines()))
     end = len(subdirs) if end == -1 else end
