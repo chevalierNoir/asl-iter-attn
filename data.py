@@ -40,7 +40,7 @@ class SLData(tud.Dataset):
         return "0"*(4-len(str(i))) + str(i)
 
     def __getitem__(self, idx):
-        label = map(lambda x: self.vocab_map[x], self.labels[idx])
+        label = list(map(lambda x: self.vocab_map[x], self.labels[idx]))
         fnames = [self._int2str(i)+".jpg" for i in range(1, self.num_frames[idx]+1)]
         imgs, priors = [], []
         for fname in fnames:
